@@ -9,14 +9,14 @@ script:
   - docker run njbarrett/docker-react npm run test -- --coverage
 
 deploy:
-  provider: elasticbeanstalk
+  provider: "elasticbeanstalk"
   region: "ap-southeast-2"
   app: "docker-react"
-  env: "DockerTest-env",
+  env: "DockerTest-env"
   bucket_name: "elasticbeanstalk-ap-southeast-2-817396315908"
   bucket_path: "docker-react"
   on:
-    branch: master
+    branch: "master"
   access_key_id: "$AWS_KEY_ID"
   secret_access_key:
     secure: "$AWS_SECRET"
